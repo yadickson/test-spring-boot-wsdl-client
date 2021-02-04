@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="FileWs" targetNamespace="http://localhost:8090/file" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:tns="http://localhost:8090/file" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata">
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://localhost:8090/file" schemaLocation="file.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="DeleteResponse">
+    <part name="parameters" element="tns:DeleteResponse"/>
+  </message>
+  <message name="ChangeUserMode">
+    <part name="parameters" element="tns:ChangeUserMode"/>
+  </message>
+  <message name="ValidateAuthorizationCode">
+    <part name="parameters" element="tns:ValidateAuthorizationCode"/>
+  </message>
+  <message name="PutOnlineCode">
+    <part name="parameters" element="tns:PutOnlineCode"/>
+  </message>
+  <message name="UserKeyQxStatus">
+    <part name="parameters" element="tns:UserKeyQxStatus"/>
+  </message>
+  <message name="GetOnlineCodeResponse">
+    <part name="parameters" element="tns:GetOnlineCodeResponse"/>
+  </message>
+  <message name="GenerateAuthorizationCodeResponse">
+    <part name="parameters" element="tns:GenerateAuthorizationCodeResponse"/>
+  </message>
+  <message name="GenerateChallengeResponse">
+    <part name="parameters" element="tns:GenerateChallengeResponse"/>
+  </message>
+  <message name="ChangeOfflineModeResponse">
+    <part name="parameters" element="tns:ChangeOfflineModeResponse"/>
+  </message>
+  <message name="GenerateAuthorizationCode">
+    <part name="parameters" element="tns:GenerateAuthorizationCode"/>
+  </message>
+  <message name="GenerateChallenge">
+    <part name="parameters" element="tns:GenerateChallenge"/>
+  </message>
+  <message name="ValidateResponseResponse">
+    <part name="parameters" element="tns:ValidateResponseResponse"/>
+  </message>
+  <message name="SuspendResponse">
+    <part name="parameters" element="tns:SuspendResponse"/>
+  </message>
+  <message name="ValidateResponse">
+    <part name="parameters" element="tns:ValidateResponse"/>
+  </message>
+  <message name="OtpValidateCodeResponse">
+    <part name="parameters" element="tns:OtpValidateCodeResponse"/>
+  </message>
+  <message name="UserBlacklistStatusResponse">
+    <part name="parameters" element="tns:UserBlacklistStatusResponse"/>
+  </message>
+  <message name="UserStatus">
+    <part name="parameters" element="tns:UserStatus"/>
+  </message>
+  <message name="ValidateAuthorizationCodeResponse">
+    <part name="parameters" element="tns:ValidateAuthorizationCodeResponse"/>
+  </message>
+  <message name="ChangeUserModeResponse">
+    <part name="parameters" element="tns:ChangeUserModeResponse"/>
+  </message>
+  <message name="ValidateTransactionResponse">
+    <part name="parameters" element="tns:ValidateTransactionResponse"/>
+  </message>
+  <message name="SendInformationResponse">
+    <part name="parameters" element="tns:SendInformationResponse"/>
+  </message>
+  <message name="ChangeOfflineMode">
+    <part name="parameters" element="tns:ChangeOfflineMode"/>
+  </message>
+  <message name="UserKeyQxStatusResponse">
+    <part name="parameters" element="tns:UserKeyQxStatusResponse"/>
+  </message>
+  <message name="Suspend">
+    <part name="parameters" element="tns:Suspend"/>
+  </message>
+  <message name="ActivationResponse">
+    <part name="parameters" element="tns:ActivationResponse"/>
+  </message>
+  <message name="sendPush">
+    <part name="parameters" element="tns:sendPush"/>
+  </message>
+  <message name="UnSuspendResponse">
+    <part name="parameters" element="tns:UnSuspendResponse"/>
+  </message>
+  <message name="SendInformation">
+    <part name="parameters" element="tns:SendInformation"/>
+  </message>
+  <message name="GetOnlineCode">
+    <part name="parameters" element="tns:GetOnlineCode"/>
+  </message>
+  <message name="PutOnlineCodeResponse">
+    <part name="parameters" element="tns:PutOnlineCodeResponse"/>
+  </message>
+  <message name="ValidateTransaction">
+    <part name="parameters" element="tns:ValidateTransaction"/>
+  </message>
+  <message name="sendPushResponse">
+    <part name="parameters" element="tns:sendPushResponse"/>
+  </message>
+  <message name="OtpGetMechanismResponse">
+    <part name="parameters" element="tns:OtpGetMechanismResponse"/>
+  </message>
+  <message name="UserBlacklistStatus">
+    <part name="parameters" element="tns:UserBlacklistStatus"/>
+  </message>
+  <message name="OtpGetMechanism">
+    <part name="parameters" element="tns:OtpGetMechanism"/>
+  </message>
+  <message name="RegisterDeviceResponse">
+    <part name="parameters" element="tns:RegisterDeviceResponse"/>
+  </message>
+  <message name="Activation">
+    <part name="parameters" element="tns:Activation"/>
+  </message>
+  <message name="UnSuspend">
+    <part name="parameters" element="tns:UnSuspend"/>
+  </message>
+  <message name="Delete">
+    <part name="parameters" element="tns:Delete"/>
+  </message>
+  <message name="OtpValidateCode">
+    <part name="parameters" element="tns:OtpValidateCode"/>
+  </message>
+  <message name="UserStatusResponse">
+    <part name="parameters" element="tns:UserStatusResponse"/>
+  </message>
+  <message name="RegisterDevice">
+    <part name="parameters" element="tns:RegisterDevice"/>
+  </message>
+  <message name="ActivationConfirmation">
+    <part name="parameters" element="tns:ActivationConfirmation"/>
+  </message>
+  <message name="ActivationConfirmationResponse">
+    <part name="parameters" element="tns:ActivationConfirmationResponse"/>
+  </message>
+  <portType name="FileWs">
+    <operation name="Delete">
+      <input message="tns:Delete" wsam:Action="http://localhost:8090/file/FileWs/DeleteRequest"/>
+      <output message="tns:DeleteResponse" wsam:Action="http://localhost:8090/file/FileWs/DeleteResponse"/>
+    </operation>
+    <operation name="UserStatus">
+      <input message="tns:UserStatus" wsam:Action="http://localhost:8090/file/FileWs/UserStatusRequest"/>
+      <output message="tns:UserStatusResponse" wsam:Action="http://localhost:8090/file/FileWs/UserStatusResponse"/>
+    </operation>
+    <operation name="GetOnlineCode">
+      <input message="tns:GetOnlineCode" wsam:Action="http://localhost:8090/file/FileWs/GetOnlineCodeRequest"/>
+      <output message="tns:GetOnlineCodeResponse" wsam:Action="http://localhost:8090/file/FileWs/GetOnlineCodeResponse"/>
+    </operation>
+    <operation name="OtpValidateCode">
+      <input message="tns:OtpValidateCode" wsam:Action="http://localhost:8090/file/FileWs/OtpValidateCodeRequest"/>
+      <output message="tns:OtpValidateCodeResponse" wsam:Action="http://localhost:8090/file/FileWs/OtpValidateCodeResponse"/>
+    </operation>
+    <operation name="SendInformation">
+      <input message="tns:SendInformation" wsam:Action="http://localhost:8090/file/FileWs/SendInformationRequest"/>
+      <output message="tns:SendInformationResponse" wsam:Action="http://localhost:8090/file/FileWs/SendInformationResponse"/>
+    </operation>
+    <operation name="PutOnlineCode">
+      <input message="tns:PutOnlineCode" wsam:Action="http://localhost:8090/file/FileWs/PutOnlineCodeRequest"/>
+      <output message="tns:PutOnlineCodeResponse" wsam:Action="http://localhost:8090/file/FileWs/PutOnlineCodeResponse"/>
+    </operation>
+    <operation name="UserBlacklistStatus">
+      <input message="tns:UserBlacklistStatus" wsam:Action="http://localhost:8090/file/FileWs/UserBlacklistStatusRequest"/>
+      <output message="tns:UserBlacklistStatusResponse" wsam:Action="http://localhost:8090/file/FileWs/UserBlacklistStatusResponse"/>
+    </operation>
+    <operation name="GenerateAuthorizationCode">
+      <input message="tns:GenerateAuthorizationCode" wsam:Action="http://localhost:8090/file/FileWs/GenerateAuthorizationCodeRequest"/>
+      <output message="tns:GenerateAuthorizationCodeResponse" wsam:Action="http://localhost:8090/file/FileWs/GenerateAuthorizationCodeResponse"/>
+    </operation>
+    <operation name="Suspend">
+      <input message="tns:Suspend" wsam:Action="http://localhost:8090/file/FileWs/SuspendRequest"/>
+      <output message="tns:SuspendResponse" wsam:Action="http://localhost:8090/file/FileWs/SuspendResponse"/>
+    </operation>
+    <operation name="RegisterDevice">
+      <input message="tns:RegisterDevice" wsam:Action="http://localhost:8090/file/FileWs/RegisterDeviceRequest"/>
+      <output message="tns:RegisterDeviceResponse" wsam:Action="http://localhost:8090/file/FileWs/RegisterDeviceResponse"/>
+    </operation>
+    <operation name="UserKeyQxStatus">
+      <input message="tns:UserKeyQxStatus" wsam:Action="http://localhost:8090/file/FileWs/UserKeyQxStatusRequest"/>
+      <output message="tns:UserKeyQxStatusResponse" wsam:Action="http://localhost:8090/file/FileWs/UserKeyQxStatusResponse"/>
+    </operation>
+    <operation name="GenerateChallenge">
+      <input message="tns:GenerateChallenge" wsam:Action="http://localhost:8090/file/FileWs/GenerateChallengeRequest"/>
+      <output message="tns:GenerateChallengeResponse" wsam:Action="http://localhost:8090/file/FileWs/GenerateChallengeResponse"/>
+    </operation>
+    <operation name="ChangeOfflineMode">
+      <input message="tns:ChangeOfflineMode" wsam:Action="http://localhost:8090/file/FileWs/ChangeOfflineModeRequest"/>
+      <output message="tns:ChangeOfflineModeResponse" wsam:Action="http://localhost:8090/file/FileWs/ChangeOfflineModeResponse"/>
+    </operation>
+    <operation name="sendPush">
+      <input message="tns:sendPush" wsam:Action="http://localhost:8090/file/FileWs/sendPushRequest"/>
+      <output message="tns:sendPushResponse" wsam:Action="http://localhost:8090/file/FileWs/sendPushResponse"/>
+    </operation>
+    <operation name="OtpGetMechanism">
+      <input message="tns:OtpGetMechanism" wsam:Action="http://localhost:8090/file/FileWs/OtpGetMechanismRequest"/>
+      <output message="tns:OtpGetMechanismResponse" wsam:Action="http://localhost:8090/file/FileWs/OtpGetMechanismResponse"/>
+    </operation>
+    <operation name="ChangeUserMode">
+      <input message="tns:ChangeUserMode" wsam:Action="http://localhost:8090/file/FileWs/ChangeUserModeRequest"/>
+      <output message="tns:ChangeUserModeResponse" wsam:Action="http://localhost:8090/file/FileWs/ChangeUserModeResponse"/>
+    </operation>
+    <operation name="ValidateTransaction">
+      <input message="tns:ValidateTransaction" wsam:Action="http://localhost:8090/file/FileWs/ValidateTransactionRequest"/>
+      <output message="tns:ValidateTransactionResponse" wsam:Action="http://localhost:8090/file/FileWs/ValidateTransactionResponse"/>
+    </operation>
+    <operation name="ValidateResponse">
+      <input message="tns:ValidateResponse" wsam:Action="http://localhost:8090/file/FileWs/ValidateResponseRequest"/>
+      <output message="tns:ValidateResponseResponse" wsam:Action="http://localhost:8090/file/FileWs/ValidateResponseResponse"/>
+    </operation>
+    <operation name="ValidateAuthorizationCode">
+      <input message="tns:ValidateAuthorizationCode" wsam:Action="http://localhost:8090/file/FileWs/ValidateAuthorizationCodeRequest"/>
+      <output message="tns:ValidateAuthorizationCodeResponse" wsam:Action="http://localhost:8090/file/FileWs/ValidateAuthorizationCodeResponse"/>
+    </operation>
+    <operation name="ActivationConfirmation">
+      <input message="tns:ActivationConfirmation" wsam:Action="http://localhost:8090/file/FileWs/ActivationConfirmationRequest"/>
+      <output message="tns:ActivationConfirmationResponse" wsam:Action="http://localhost:8090/file/FileWs/ActivationConfirmationResponse"/>
+    </operation>
+    <operation name="Activation">
+      <input message="tns:Activation" wsam:Action="http://localhost:8090/file/FileWs/ActivationRequest"/>
+      <output message="tns:ActivationResponse" wsam:Action="http://localhost:8090/file/FileWs/ActivationResponse"/>
+    </operation>
+    <operation name="UnSuspend">
+      <input message="tns:UnSuspend" wsam:Action="http://localhost:8090/file/FileWs/UnSuspendRequest"/>
+      <output message="tns:UnSuspendResponse" wsam:Action="http://localhost:8090/file/FileWs/UnSuspendResponse"/>
+    </operation>
+  </portType>
+  <binding name="FilePortBinding" type="tns:FileWs">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="Delete">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="UserStatus">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GetOnlineCode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="OtpValidateCode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="SendInformation">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="PutOnlineCode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="UserBlacklistStatus">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GenerateAuthorizationCode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Suspend">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="RegisterDevice">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="UserKeyQxStatus">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="GenerateChallenge">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ChangeOfflineMode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="sendPush">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="OtpGetMechanism">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ChangeUserMode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ValidateTransaction">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ValidateResponse">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ValidateAuthorizationCode">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="ActivationConfirmation">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="Activation">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="UnSuspend">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="FileWs">
+    <port name="FilePort" binding="tns:FilePortBinding">
+      <soap:address location="http://localhost:8090/File/FileWs"/>
+    </port>
+  </service>
+</definitions>
